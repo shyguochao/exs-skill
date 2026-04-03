@@ -6,3 +6,6 @@ __pycache__/
 *.pyc
 *.pyo
 .env
+
+# Comate 内部目录
+.comate/
