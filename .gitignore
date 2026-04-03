@@ -1,0 +1,8 @@
+# 运行时产物
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
