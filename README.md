@@ -1,5 +1,9 @@
 # findRightGuy Skill
 
+<div align="center">
+  <img src="social/cover.png" alt="findRightGuy — 蒸馏一个前任？不，我要蒸馏10个！！！" width="540" />
+</div>
+
 > 蒸馏一个前任？不，我要蒸馏10个！
 
 你曾经爱过的每一个人，都在不经意间告诉了你——**你真正想要的是什么**。
