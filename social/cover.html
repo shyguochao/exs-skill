@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>findRightGuy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1080px;
+      height: 1080px;
+      background: linear-gradient(135deg, #1a0a2e 0%, #2d1060 40%, #0d0d2b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif;
+    }
+
+    /* 背景装饰粒子 */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.15;
+    }
+    .bg-circle.c1 { width: 500px; height: 500px; background: #ff6ec7; top: -100px; left: -100px; }
+    .bg-circle.c2 { width: 400px; height: 400px; background: #7b2fff; bottom: -80px; right: -80px; }
+    .bg-circle.c3 { width: 300px; height: 300px; background: #ff9500; top: 50%; left: 60%; }
+
+    .card {
+      position: relative;
+      width: 900px;
+      padding: 80px 80px 72px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 32px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 20px;
+      border-radius: 100px;
+      background: linear-gradient(90deg, #ff6ec7, #7b2fff);
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    }
+
+    .main-title {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #fff;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .main-title .highlight {
+      background: linear-gradient(90deg, #ff6ec7 0%, #ffb347 50%, #ff6ec7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .exclaim {
+      font-size: 80px;
+      background: linear-gradient(90deg, #ffb347, #ff6ec7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #ff6ec7, #7b2fff);
+      margin: 36px auto;
+      border-radius: 2px;
+    }
+
+    .subtitle {
+      font-size: 26px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .subtitle em {
+      color: rgba(255,255,255,0.9);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 1px;
+      font-family: 'SF Mono', 'Courier New', monospace;
+    }
+
+    .footer-logo span {
+      background: linear-gradient(90deg, #ff6ec7, #7b2fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-dot {
+      width: 5px;
+      height: 5px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 50%;
+    }
+
+    .footer-desc {
+      font-size: 18px;
+      color: rgba(255,255,255,0.35);
+      font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    /* 四角装饰 */
+    .corner {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-color: rgba(255,110,199,0.4);
+      border-style: solid;
+    }
+    .corner.tl { top: 20px; left: 20px; border-width: 2px 0 0 2px; }
+    .corner.tr { top: 20px; right: 20px; border-width: 2px 2px 0 0; }
+    .corner.bl { bottom: 20px; left: 20px; border-width: 0 0 2px 2px; }
+    .corner.br { bottom: 20px; right: 20px; border-width: 0 2px 2px 0; }
+  </style>
+</head>
+<body>
+  <div class="bg-circle c1"></div>
+  <div class="bg-circle c2"></div>
+  <div class="bg-circle c3"></div>
+
+  <div class="card">
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <div class="tag">Claude Code Skill</div>
+
+    <div class="main-title">
+      蒸馏一个前任？不，<br>
+      我要蒸馏<span class="highlight">10个</span><span class="exclaim">！！！</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="subtitle">
+      量变引起质变的典型应用<br>
+      把所有前任的聊天记录丢进去<br>
+      提炼出<em>属于你的理想对象画像</em>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">find<span>Right</span>Guy</div>
+      <div class="footer-dot"></div>
+      <div class="footer-desc">前任越多，画像越准</div>
+    </div>
+  </div>
+</body>
+</html>
