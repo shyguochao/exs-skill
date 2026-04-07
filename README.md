@@ -60,8 +60,8 @@
 ## 安装
 
 ```bash
-# 安装到全局
-npx skills add <owner/repo@exs-skill> -g -y
+# 通过 skills.sh 安装
+npx skills add shyguochao/exs-skill
 
 # 安装 Python 依赖
 pip install -r requirements.txt

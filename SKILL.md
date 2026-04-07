@@ -1,7 +1,7 @@
 ---
 name: exs-skill
 description: 通过分析与前任的聊天记录，提炼理想对象画像，提供对话模拟、恋爱模版导出和恋爱顾问三大功能
-version: v1.0
+license: MIT
 allowed-tools: Read, Write, Edit, Bash
 ---
 

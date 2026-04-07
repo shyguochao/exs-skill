@@ -57,8 +57,8 @@ Here's what happens under the hood:
 ## Installation
 
 ```bash
-# Install globally
-npx skills add <owner/repo@exs-skill> -g -y
+# Install via skills.sh
+npx skills add shyguochao/exs-skill
 
 # Install Python dependencies
 pip install -r requirements.txt
