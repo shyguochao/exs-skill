@@ -1,4 +1,4 @@
-# findRightGuy Skill
+# exs-skill
 
 > Distill one ex? No — I want to distill **ten**.
 
@@ -8,7 +8,7 @@ The problem? Those answers are buried in tens of thousands of chat messages, san
 
 Until now.
 
-**findRightGuy** is a Skill that runs inside Claude Code. Feed it your chat history with every ex, and it figures out: which conversations made you happier the longer they went, what they said or did that made you burst out laughing, what kind of person made you want to text first. It then aggregates all those traits across every ex and distills your personal **Ideal Partner Profile**.
+**exs-skill** is a Skill that runs inside Claude Code. Feed it your chat history with every ex, and it figures out: which conversations made you happier the longer they went, what they said or did that made you burst out laughing, what kind of person made you want to text first. It then aggregates all those traits across every ex and distills your personal **Ideal Partner Profile**.
 
 > Classic proof that quantity leads to quality — the more exes, the sharper the portrait.
 
@@ -58,7 +58,7 @@ Here's what happens under the hood:
 
 ```bash
 # Install globally
-npx skills add <owner/repo@findRightGuy> -g -y
+npx skills add <owner/repo@exs-skill> -g -y
 
 # Install Python dependencies
 pip install -r requirements.txt

@@ -1,7 +1,7 @@
-# findRightGuy Skill
+# exs-skill
 
 <div align="center">
-  <img src="social/cover.png" alt="findRightGuy — 蒸馏一个前任？不，我要蒸馏10个！！！" width="540" />
+  <img src="social/cover.png" alt="exs-skill — 蒸馏一个前任？不，我要蒸馏10个！！！" width="540" />
 </div>
 
 > 蒸馏一个前任？不，我要蒸馏10个！
@@ -12,7 +12,7 @@
 
 直到现在。
 
-**findRightGuy** 是一个运行在 Claude Code 上的 Skill，把你所有前任的聊天记录丢进去，它会替你找出：哪些对话让你越聊越开心、对方做了什么让你忍不住哈哈哈、什么样的人让你愿意主动发消息。然后把这些特征跨前任聚合，提炼出属于你的「理想对象画像」。
+**exs-skill** 是一个运行在 Claude Code 上的 Skill，把你所有前任的聊天记录丢进去，它会替你找出：哪些对话让你越聊越开心、对方做了什么让你忍不住哈哈哈、什么样的人让你愿意主动发消息。然后把这些特征跨前任聚合，提炼出属于你的「理想对象画像」。
 
 > 量变引起质变的典型应用——前任越多，画像越准。
 
@@ -61,7 +61,7 @@
 
 ```bash
 # 安装到全局
-npx skills add <owner/repo@findRightGuy> -g -y
+npx skills add <owner/repo@exs-skill> -g -y
 
 # 安装 Python 依赖
 pip install -r requirements.txt
